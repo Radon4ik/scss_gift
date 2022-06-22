@@ -1,0 +1,41 @@
+.about {
+    padding-top: 4px;
+    padding-bottom: 130px;
+    background-color: #F1F1F2;
+}
+
+.about .container {
+    display: flex;
+    gap: 130px;
+}
+
+.about__picture {
+    width: 570px;
+}
+
+.about__img {
+    width: 100%;
+}
+
+.about__container {
+    display: flex;
+    flex-direction: column;
+    width: 440px;
+    align-items: flex-start;
+}
+
+
+.about__title {
+    font-size: 3.2rem;
+    line-height: 1.4;
+    color: #000000;
+    margin-bottom: 23px;
+}
+
+.about__text {
+    font-size: 2rem;
+    line-height: 1.4;
+    text-align: justify;
+    color: #000000;
+    margin-bottom: 35px;
+}
