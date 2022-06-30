@@ -1,3 +1,5 @@
+@import "custom-media";
+
 @font-face {
     font-family: Pacifico;
     font-weight: 400;
@@ -34,4 +36,11 @@ body, html {
     width: 1170px;
     margin-left: auto;
     margin-right: auto;
+
+  @include media-1200() {
+    width: 90%;
+  }
+  @include media-992() {
+    width: 95%;
+  }
 }

@@ -1,118 +1,180 @@
+@import "variables";
+@import "custom-media";
+
+
 .blogs {
-    padding-top: 88px;
-    padding-bottom: 80px;
-    background-color: #FFFFFF;
+  @include padding(88px, 80px);
+  background-color: $white;
+
+  @include media-1200() {
+    @include padding(40px, 40px);
+  }
+  @include media-992() {
+    @include padding(20px, 20px);
+  }
 }
 
 .blogs__title {
-    font-size: 3.2rem;
-    line-height: 1.18;
-    text-align: center;
-    color: #000000;
-    margin-bottom: 23px;
+  font-size: 3.2rem;
+  line-height: 1.18;
+  text-align: center;
+  color: $black;
+  margin-bottom: 23px;
+
+  @include media-1200() {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
 }
 
 .blogs__text {
-    font-size: 1.8rem;
-    line-height: 1.35;
-    text-align: center;
-    color: #000000;
-    margin-bottom: 64px;
-}
+  font-size: $txt-size;
+  line-height: 1.35;
+  text-align: center;
+  color: $black;
+  margin-bottom: 64px;
 
-.blogs__text::before {
+  &::before {
     content: '\201c';
+  }
+
+  &::after {
+    content: '\201d';
+  }
+
+  @include media-1200() {
+    margin-bottom: 30px;
+  }
+
 }
 
-.blogs__text::after {
-    content: '\201d';
-}
 
 .blogs__content {
-    display: flex;
-    margin-bottom: 40px;
+  display: flex;
+  margin-bottom: 40px;
 
+  @include media-1200() {
+    margin-bottom: 20px;
+  }
+  @include media-768() {
+    flex-direction: column;
+  }
 }
 
 .blogs__picture {
-    width: 400px;
+  width: 400px;
+
+  @include media-768() {
+    width: 100%;
+  }
 }
 
 .blogs__img {
-    width: 100%;
+  width: 100%;
 }
 
 .blog__description {
-    padding: 63px 100px 49px;
-    display: flex;
-    flex-direction: column;
-    background-color: #231F20;
+  padding: 63px 100px 49px;
+  display: flex;
+  flex-direction: column;
+  background-color: #231F20;
+
+  @include media-1200() {
+    padding: 30px 50px 25px;
+  }
+  @include media-768() {
+    padding: 10px 15px 8px;
+  }
 }
 
 .blogs__subtext {
-    font-size: 1.4rem;
-    line-height: 1.4;
-    color: #FFFFFF;
+  font-size: 1.4rem;
+  line-height: 1.4;
+  color: $white;
 }
 
 .blogs__subtitle {
-    font-size: 4.8rem;
-    line-height: 1.2;
-    color: #FFFFFF;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    flex-grow: 1;
+  font-size: 4.8rem;
+  line-height: 1.2;
+  color: $white;
+  @include padding(10px, 10px);
+  flex-grow: 1;
+
+  @include media-1200() {
+    font-size: 4.5rem;
+  }
+  @include media-768() {
+    font-size: 3.8rem;
+  }
 }
 
 .blogs__link {
-    text-decoration: none;
-    font-size: 1.8rem;
-    line-height: 1.4;
-    color: #FFFFFF;
+  text-decoration: none;
+  font-size: $txt-size;
+  line-height: 1.4;
+  color: $white;
 }
 
 .list {
-    display: flex;
-    gap: 30px;
-    justify-content: space-between;
-    align-items: center;
-}
+  @include flex;
+  gap: 30px;
 
-.list__item  {
-    min-height: 290px;
-    display: flex;
+  @include media-1200() {
+    gap: 15px;
+  }
+  @include media-768() {
     flex-direction: column;
-    padding: 50px;
+  }
 }
 
-.list__item:hover {
-    background-color: #FFFFFF;
+.list__item {
+  min-height: 290px;
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+
+  &:hover {
+    background-color: $white;
     box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.05);
     transition: all 1.3s;
+  }
 
+  @include media-1200() {
+    padding: 25px;
+  }
+  @include media-768() {
+    text-align: center;
+  }
 }
 
-
 .list__title {
-    font-weight: bold;
-    font-size: 2.4rem;
-    line-height: 1.41;
-    color: #000000;
-    margin-bottom: 16px;
+  font-weight: bold;
+  font-size: 2.4rem;
+  line-height: 1.41;
+  color: $black;
+  margin-bottom: 16px;
+
+  @include media-1200() {
+    margin-bottom: 10px;
+    font-size: 2.2rem;
+  }
 }
 
 .list__text {
-    font-size: 1.8rem;
-    line-height: 1.41;
-    color: #000000;
-    margin-bottom: 16px;
-    flex-grow: 1;
+  font-size: $txt-size;
+  line-height: 1.41;
+  color: $black;
+  margin-bottom: 16px;
+  flex-grow: 1;
 
+  @include media-1200() {
+    margin-bottom: 10px;
+  }
 }
 
 .list__link {
-    text-decoration: none;
-    font-size: 1.4rem;
-    line-height: 1.41;
-    color: #000000;
+  text-decoration: none;
+  font-size: 1.4rem;
+  line-height: 1.41;
+  color: $black;
 }
